@@ -1,10 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const cors = require('cors');
 const videoController = require('../controller/videoController');
-const video = require('../models/videoModel');
 
-router.get("/video", videoController.allVideo);
+// show all videos
+router.get("/videos", videoController.allVideo);
+
+// add video
+router.post("/add-video", videoController.addVideo);
 
 
 module.exports = router;

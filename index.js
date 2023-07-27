@@ -28,10 +28,11 @@ app.use(
     }),
 );
 
-const video = require('./models/videoModel');
-const videoRoutes = require('./routes/videoRoutes');
+const videoRouter = require('./routes/videoRoutes');
+const productRouter = require('./routes/productRoutes');
 
-app.use('/video', videoRoutes);
+app.use('/', videoRouter);
+app.use('/', productRouter);
 
 app.listen(5000, () => {
     console.log(`Server is running on port ${5000}`);
