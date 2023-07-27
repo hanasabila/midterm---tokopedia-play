@@ -7,7 +7,4 @@ const video = require('../models/videoModel');
 router.get("/video", videoController.allVideo);
 
 
-
-
-
 module.exports = router;

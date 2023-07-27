@@ -11,5 +11,4 @@ const allVideo  = async (req, res) => {
     }
 };
 
-
 module.exports = { allVideo };
