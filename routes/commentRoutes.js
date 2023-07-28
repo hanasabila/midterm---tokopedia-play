@@ -6,7 +6,7 @@ const commentController = require('../controller/commentController');
 router.post("/:videoID/add-comment", commentController.addComment);
 
 // show comment list
-
+router.get("/:videoID/get-comment", commentController.getComment);
 
 
 module.exports = router;

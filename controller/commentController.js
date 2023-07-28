@@ -2,7 +2,18 @@ const mongoose = require('mongoose');
 const Comment = require('../models/commentModel');
 
 // function to show comments
-
+const getComment = async (req, res) => {
+    try {
+        const comments = await Comment.find({
+            videoID: req.params.videoID
+        });
+        res.json(comments);
+    }
+    catch(error) {
+        console.log(error.message);
+        res.status(500).json({ message: 'Comment not found.' });
+    }
+}
 
 
 // function to add comments
@@ -24,4 +35,4 @@ const addComment = async (req, res) => {
     }
 };
 
-module.exports = { addComment };
+module.exports = { addComment, getComment };
