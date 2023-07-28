@@ -17,9 +17,8 @@ const allVideo  = async (req, res) => {
 // function to add video
 const addVideo = async (req, res) => {
     try {
-        const { videoID, imgURL } = req.body;
+        const { imgURL } = req.body;
         const addVideo = new video({
-        videoID,
         imgURL
     })
     const savedVideo = await addVideo.save();
@@ -27,7 +26,7 @@ const addVideo = async (req, res) => {
     }
     catch(error) {
         console.log(error.message);
-        res.status(500).json({ message: 'Failed to add video'});
+        res.status(500).json({ message: 'Failed to add video.'});
     }
 };
 
