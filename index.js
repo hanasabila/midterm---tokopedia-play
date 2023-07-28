@@ -30,9 +30,11 @@ app.use(
 
 const videoRouter = require('./routes/videoRoutes');
 const productRouter = require('./routes/productRoutes');
+const commentRouter = require('./routes/commentRoutes');
 
 app.use('/', videoRouter);
 app.use('/', productRouter);
+app.use('/', commentRouter);
 
 app.listen(5000, () => {
     console.log(`Server is running on port ${5000}`);
