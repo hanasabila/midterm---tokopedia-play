@@ -3,9 +3,9 @@ const router = express.Router();
 const productController = require('../controller/productController');
 
 // show all products
-router.get("/products", productController.allProduct);
+router.get("/:videoID/products", productController.getProduct);
 
 // add video
-router.post("/add-product", productController.addProduct);
+router.post("/:videoID/add-product", productController.addProduct);
 
 module.exports = router;
