@@ -11,7 +11,7 @@ const getComment = async (req, res) => {
     }
     catch(error) {
         console.log(error.message);
-        res.status(500).json({ message: 'Comment not found.' });
+        res.status(500).json({ message: 'No comments here. Be the first one!' });
     }
 }
 
