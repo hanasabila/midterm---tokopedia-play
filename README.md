@@ -235,7 +235,7 @@ Returns comments in a video.
 ### POST /:videoID/add-comment (required)
 Adds a new comment in a video and returns the new object.
 * **URL Params**  
-  None
+  http://localhost:5000/videoID/add-comment
 * **Headers**  
   Content-Type: application/json  
 * **Data Params**  
